@@ -1,13 +1,16 @@
 import Select_img_URL from "../image/main.js";
 export default class Sword{
-    constructor(SwordParam={name, damage, price, level,life}) {
+    constructor(SwordParam={name, damage, price, level,life,isEquiped,materials:[]}) {
         const [image_url, gif_url] = Select_img_URL(SwordParam.name);
         this.name = SwordParam.name;
         this.damage = SwordParam.damage;
         this.image_url = image_url;
         this.gif_url = gif_url;
-        this.price = SwordParam.price;
-        this.rarity = SwordParam.rarity;
+        this.level = SwordParam.level || 1;
+        this.life = SwordParam.life || this.level * 0.3;
+        this.price = SwordParam.price || this.level * 2;
+        this.materials = SwordParam.materials || [];
+        this.isEquiped = false;
         return this
     }
     AddLevel(level) {
