@@ -6,7 +6,8 @@ export default class SectionUserData {
         this.Health = 100;
         this.Swords = [];
         this.Coins = 0;
-        this.Achievements = [];   
+        this.Achievements = [];  
+        this.Page = "Home";
         localStorage.setItem("me", JSON.stringify(this));
     }
     AddLevel() {
@@ -34,5 +35,9 @@ export default class SectionUserData {
     }
     getData() {
         return JSON.parse(localStorage.getItem("me"));
+    }
+    SetPage(page) {
+        this.Page = page;
+        localStorage.setItem("me", JSON.stringify(this));
     }
 }

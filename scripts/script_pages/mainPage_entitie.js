@@ -1,6 +1,7 @@
 export default class MainPage{
-    constructor(page){
+    constructor(page,userData) {
         this.page = page;
+        this.userData = userData;
         this.name = page.name;
         this.path = page.path;
         window.location.href = page.path;
@@ -10,5 +11,6 @@ export default class MainPage{
         this.name = page.name;
         this.path = page.path;
         window.location.href = page.path;
+        this.userData.SetPage(page);
     }
 }
