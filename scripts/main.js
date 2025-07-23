@@ -12,7 +12,9 @@ InitializeSwords();
 
 
 
-user.AddSword(serviceSwords.getSwords()[9]);
+serviceSwords.getSwords().forEach(sword => {
+    user.AddSword(sword);   
+})
 
 user.AddCoins(100);
 user.AddExperience(50);
