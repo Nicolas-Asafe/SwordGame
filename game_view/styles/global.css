@@ -12,6 +12,52 @@ body {
     font-weight: 200;
     font-style: normal;
 }
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #000000;
+}
+.row {
+    display: flex;
+    background-color: #000000bd;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    position: absolute;
+    right: 3px;
+    left: 100;
+    width: max-content;
+    flex-direction: column;
+} 
+.materials-list{
+    border-top: 2px solid #000000;
+    overflow-y: scroll;
+    height:150px;
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    padding: 20px;
+    gap: 10px;
+}
+.material-image{
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #8f8f8f; 
+    transition: all 0.1s ease-in-out;
+}
+.swords-list {
+    display: grid;
+    overflow-y: scroll;
+    height:150px;
+    grid-template-columns: repeat(3, 70px);
+    padding: 20px;
+    gap: 10px;
+}
+.sword-image{
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #8f8f8f; 
+    transition: all 0.1s ease-in-out;
+}
 button{
     padding: 10px 20px;
     font-size: 23px;

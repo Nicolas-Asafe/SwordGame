@@ -25,6 +25,13 @@ export default class SectionUserData {
     AddSword(sword) {
         this.Swords.push(sword);
     }
+    AddMaterial(material) {
+        if (!this.Materials) {
+            this.Materials = [];
+        }
+        this.Materials.push(material);
+        localStorage.setItem("me", JSON.stringify(this));
+    }
     AddCoins(amount) {
         this.Coins += amount;
         localStorage.setItem("me", JSON.stringify(this));
