@@ -1,3 +1,7 @@
 const swords = []
 
-export default swords
+function Swords(){
+    return swords;
+}
+
+export default Swords

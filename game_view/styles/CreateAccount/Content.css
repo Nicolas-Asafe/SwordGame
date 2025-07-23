@@ -21,3 +21,12 @@
     margin-bottom: 20px;
     color: #0a0a0a;
 }
+
+.Content>form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    button{
+        width: 100%;
+    }
+}

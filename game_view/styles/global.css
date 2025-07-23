@@ -13,51 +13,12 @@ body {
     font-style: normal;
 }
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 0px;
+    border-radius: 20px;
     background-color: #000000;
 }
-.row {
-    display: flex;
-    background-color: #000000bd;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    position: absolute;
-    right: 3px;
-    left: 100;
-    width: max-content;
-    flex-direction: column;
-} 
-.materials-list{
-    border-top: 2px solid #000000;
-    overflow-y: scroll;
-    height:150px;
-    display: grid;
-    grid-template-columns: repeat(3, 70px);
-    gap: 5px;
-    padding: 10px;
-}
-.material-image{
-    width: 100%;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: #8f8f8f; 
-    transition: all 0.1s ease-in-out;
-}
-.swords-list {
-    padding: 10px;
-    display: grid;
-    overflow-y: scroll;
-    height:150px;
-    grid-template-columns: repeat(3, 70px);
-    gap: 5px;
-}
-.sword-image{
-    width: 100%;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: #8f8f8f; 
-    transition: all 0.1s ease-in-out;
-}
+
+
 button{
     padding: 10px 20px;
     font-size: 23px;
@@ -66,6 +27,22 @@ button{
     transition: all 0.1s ease-in-out;
 }
 button:hover{
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px 0 #7e7e7e;
+}
+button:active{
+    transform: translate(4px,4px);
+    box-shadow: 0px 0px 0 #7e7e7e;
+}
+
+input{
+    padding: 10px 20px;
+    font-size: 23px;
+    border: 2px solid #7e7e7e;
+    box-shadow: 5px 3px 0 #7e7e7e;
+    transition: all 0.1s ease-in-out;
+}
+input:hover{
     transform: translate(2px,2px);
     box-shadow: 2px 2px 0 #7e7e7e;
 }

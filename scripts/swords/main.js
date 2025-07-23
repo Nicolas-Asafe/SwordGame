@@ -1,8 +1,7 @@
 import ServiceSwords from "./service.js";
 import Sword from "./entitie.js";
-import swords from "./swords_data.js";
+import Swords from "./swords_data.js";
 
-const serviceSwords = new ServiceSwords(swords);    
 
 function InitializeSwords(){
     const NoobSword = new Sword({name: "NoobSword", damage: 0.2, price: 0,level:0,life:3,materials: [["Wood",3]]});   
@@ -20,8 +19,9 @@ function InitializeSwords(){
     const StarSword = new Sword({name: "StarSword", damage: 360, price: 1320,level:0,life:780,materials:[["Star",23],["Titanium",7],["Gold",15],["MoonCrystal",5]]});
     const EmeraldSword = new Sword({name: "EmeraldSword", damage: 400, price: 1500,level:0,life:1000,materials:[["Emerald",30],["Titanium",10],["Gold",4]]});
     const MoonLightSword = new Sword({name: "MoonLightSword", damage: 500, price: 2000,level:0,life:1500,materials:[["MoonCrystal",30],["Titanium",10],["Diamond",20],["Star",10]]});
-    swords.push(NoobSword, CandySword, IronSword,WaterSword,KnifeSword,DiamondSword,
+    Swords().push(NoobSword, CandySword, IronSword,WaterSword,KnifeSword,DiamondSword,
         GoldSword,TitaniumSword,MoonLightSword,MoonSword,MidNightAxe,TitaniumAxe,RubySword,StarSword,EmeraldSword);
-}
-
-export {serviceSwords,InitializeSwords};
+    }
+    const serviceSwords = new ServiceSwords(Swords);    
+    
+    export {serviceSwords,InitializeSwords};
